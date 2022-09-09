@@ -4,39 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/dist/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="font-poppins">
+
   <!-- NAVIGATION BAR -->
-  <nav class="container mx-auto m-10 flex justify-between">
-    <div class="flex">
-      <div class="pt-1">
+  <nav>
+
+    <div class="container mx-auto m-10 md:flex justify-between hidden">
+      <div class="flex">
+        <div class="pt-2">
+          <img src="/images/logo.svg" alt="Shortly Logo Image">
+        </div>
+        <div class="flex pl-8 gap-8 pt-1 text-grayy font-bold">
+          <button>Features</button>
+          <button>Pricing</button>
+          <button>Resources</button>
+        </div>
+      </div>
+      <div class="flex gap-10">
+        <button>
+          <div class=" text-grayy font-bold">
+            Login
+          </div>
+        </button>
+        <button>
+          <div class="bg-cyann px-9 py-3 rounded-full text-white font-bold text-sm">
+            Sign Up
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- MOBILE HAMBURGUER MENU-->
+    <nav class="md:hidden mx-10 flex justify-end">
+      <div class="container mx-auto m-10 md:flex justify-between pt-2">
         <img src="/images/logo.svg" alt="Shortly Logo Image">
       </div>
-      <div class="flex pl-8 gap-8 pt-2 text-gray-400 font-bold">
-        <p>Features</p>
-        <p>Pricing</p>
-        <p>Resources</p>
-      </div>
-    </div>
-    <div class=" flex gap-10">
-      <div class="pt-2 text-gray-400 font-bold">
-        Login
-      </div>
-      <div class="bg-blue-300 px-7 py-3 rounded-full text-white font-bold text-sm">
-        Sign Up
-      </div>
-    </div>
-  </nav>
+      <button class="space-y-2 ">
+        <div class="w-10 h-1 bg-grayy rounded-full"></div>
+        <div class="w-10 h-1 bg-grayy rounded-full"></div>
+        <div class="w-10 h-1 bg-grayy rounded-full"></div>
+      </button>
+    </nav>
 
-  <header class="grid grid-cols-2 container mx-auto mt-20">
+  </nav>
+  
+  <!-- HEADER -->
+  <header class="grid md:grid-cols-2 container mx-auto md:mt-20">
+    <div class="md:hidden">
+      <img src="/images/illustration-working.svg" alt="Ilustration with a man working in a desk">
+    </div>
     <div class="">
-      <h1 class="text-7xl font-extrabold">More than just shorter links</h1>
-      <p class="text-gray-500 pt-2 text-justify xm:pr-10 lg:pr-56 sm:pr-36 2xl:pr-36">
+      <h1 class="lg:text-7xl sm:text-5xl sm:leading-tight leading-tight text-6xl pt-10 md:pt-1 font-bold text-center md:text-start lg:leading-tight">More than just shorter links</h1>
+      <p class="text-lg text-grayy pt-2 text-center md:text-start xm:pr-10 lg:pr-44 2xl:pr-36 ">
         Build your brand's recognition and get detailed insights on how your links are performing.
       </p>
-      <button class="mt-10 bg-blue-300 px-7 py-3 rounded-full text-white font-bold text-sm">Get Started</button>
+      <div class="flex justify-center md:justify-start">
+        <button class="mt-10 bg-cyann px-9 py-3 rounded-full text-white font-bold text-sm">
+          Get Started
+        </button> 
+      </div>
     </div>
-    <div>
+    <div class="hidden md:block">
       <img src="/images/illustration-working.svg" alt="Ilustration with a man working in a desk">
     </div>
   </header>
@@ -47,6 +79,8 @@
     <section>links</section> -->
   </main>
 
-  <footer></footer>
+  <footer>
+
+  </footer>
 
 </body>
