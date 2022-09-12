@@ -81,13 +81,28 @@
         <div class="bg-darkViolet p-8 w-full container mx-auto rounded-lg bg-cover" style="background-image: url(/images/bg-shorten-desktop.svg)">
           <div class="md:flex md:gap-8 md:justify-between">
             <div class="bg-white p-5 rounded-lg md:w-10/12">
-              <input type="text" placeholder="Shorten a link here..." class="w-full outline-0">
+              <input id="userUrl" type="text" placeholder="Shorten a link here..." class="w-full outline-0">
             </div>
             <div class="bg-cyann rounded-lg md:w-2/12 mt-5 md:mt-0 flex justify-center py-5 md:py-0">
-              <button class="text-white font-bold tracking-wide">
+              <button id="btnShortenIt" class="text-white font-bold tracking-wide">
                   Shorten it!
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DYNAMIC CARDS -->
+    <section id="dynamicContent" class="bg-slate-100">
+      <div class=" container mx-auto pt-24 ">
+        <div class="bg-white flex justify-between rounded-xl p-5">
+          <div class="py-3 px-8 text-black">
+            <a href="9qr.de/rJDC9u">9qr.de/rJDC9u</a>
+          </div>
+          <div class="flex gap-10 ">
+            <a class="text-cyann py-3 px-8" href="9qr.de/rJDC9u">9qr.de/rJDC9u</a>
+            <button class="bg-cyann text-white py-3 px-8 rounded-lg">Copy</button>
           </div>
         </div>
       </div>
@@ -244,6 +259,8 @@
     </div>
   </footer>
 
+
+<script src="/app.js"></script>
 </body> 
 
 
