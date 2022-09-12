@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/dist/output.css" rel="stylesheet">
+  <link href="/src/output.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
@@ -12,7 +12,7 @@
 <body class="font-poppins">
 
   <!-- NAVIGATION BAR -->
-  <nav class="">
+  <nav class="px-6 lg:px-0">
 
     <div class="container mx-auto m-10 md:flex justify-between hidden">
       <div class="flex">
@@ -54,7 +54,7 @@
   </nav>
   
   <!-- HEADER -->
-  <header class="grid md:grid-cols-2 container mx-auto md:mt-20">
+  <header class="grid md:grid-cols-2 container mx-auto md:mt-20 px-6 lg:px-0">
     <div class="md:hidden">
       <img src="/images/illustration-working.svg" alt="Ilustration with a man working in a desk">
     </div>
@@ -76,7 +76,7 @@
   <main class="">
 
     <!-- INPUT CARD -->
-    <section class="-mb-16 mt-20">
+    <section class="-mb-16 mt-20 px-6 lg:px-0">
       <div class="flex justify-center">
         <div class="bg-darkViolet p-8 w-full container mx-auto rounded-lg bg-cover" style="background-image: url(/images/bg-shorten-desktop.svg)">
           <div class="md:flex md:gap-8 md:justify-between">
@@ -94,13 +94,13 @@
     </section>
 
     <!-- TITLE AND P INFO -->
-    <section class="bg-slate-100 pt-40 text-center xl:px-96 ">
+    <section class="bg-slate-100 pt-40 text-center xl:px-96 px-6 lg:px-0">
       <h2 class="text-4xl font-bold pb-4">Advanced Statics</h2>
       <p class="text-grayy xl:px-20 px-2">Track how your links are performing across the web with ours advanced statics dashboard.</p>
     </section>
 
     <!-- DESCRIPTION CARDS -->
-    <section class="bg-slate-100 pb-20 pt-20 relative">
+    <section class="bg-slate-100 pb-20 pt-20 relative px-6 lg:px-0">
       <div class="container mx-auto grid md:grid-cols-3 gap-16">    
 
         <!-- Brand recognition Card -->
@@ -173,7 +173,7 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-veryDarkViolet">
+  <footer class="bg-veryDarkViolet px-6 lg:px-0">
     <div class="container grid md:grid-cols-6 py-20 mx-auto text-center md:text-start">
       <div class="md:col-span-2 pt-2 flex justify-center md:justify-start pb-8 md:pb-0">
         <svg mlns="http://www.w3.org/2000/svg" width="121" height="33">
@@ -245,3 +245,5 @@
   </footer>
 
 </body> 
+
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
