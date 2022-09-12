@@ -14,6 +14,9 @@ module.exports = {
       fontFamily: {
         'poppins': ["'Poppins', sans-serif"],
       },
+      screens: {
+        '4xl':'1700px'
+      },
     },
   },
   plugins: [],
