@@ -17,6 +17,11 @@ module.exports = {
       screens: {
         '4xl':'1700px'
       },
+      spacing: {
+        'some key': {
+          1.5: '<something>', // not sure about the correct value
+        },
+      },
     },
   },
   plugins: [],
