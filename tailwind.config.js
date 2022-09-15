@@ -10,6 +10,7 @@ module.exports = {
         'veryDarkViolet':'hsl(260, 8%, 14%)',
         'cyann':'hsl(180, 66%, 49%)',
         'darkViolet':'hsl(257, 27%, 26%)',
+        'cyann2':'hsl(180, 66%, 75%)'
       },
       fontFamily: {
         'poppins': ["'Poppins', sans-serif"],

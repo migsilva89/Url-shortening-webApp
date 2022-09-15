@@ -7,17 +7,20 @@ document.addEventListener("DOMContentLoaded", function () {
     var clipboard = new ClipboardJS('.btn-copy');
   
         clipboard.on('success', function (e) {
-          console.info('Action:', e.action);
-          console.info('Text:', e.text);
-          console.info('Trigger:', e.trigger);
+        //   console.info('Action:', e.action);
+        //   console.info('Text:', e.text);
+        //   console.info('Trigger:', e.trigger);
+          
+          e.trigger.textContent = 'Copied!'  
+          e.trigger.classList.add('bg-black', 'hover:bg-black')
         });
   
         clipboard.on('error', function (e) {
-          console.info('Action:', e.action);
-          console.info('Text:', e.text);
-          console.info('Trigger:', e.trigger);
+            alert('Not Copied! Please try again.')
+        //   console.info('Action:', e.action);
+        //   console.info('Text:', e.text);
+        //   console.info('Trigger:', e.trigger);
         });
-  
 });
 
 btnShortenIt.addEventListener('click', function () {
@@ -25,17 +28,24 @@ btnShortenIt.addEventListener('click', function () {
        fetch(`https://api.shrtco.de/v2/shorten?url=${userUrl.value}`)
         .then(response => response.json())
         .then(data => {
-            let firstShortLink = data.result.short_link
-            let secondShortLink = data.result.short_link2
-            let thirdShortLink = data.result.short_link3
-            let originalLink = data.result.original_link
-
-            displayData(firstShortLink, secondShortLink, thirdShortLink, originalLink)
-            
+            displayData(data.result.short_link, data.result.short_link2, data.result.short_link3, data.result.original_link)
+            removeErrLayout()
         })
-        .catch(err => alert("Wrong Value"))
+        .catch(err => addErrLayout());
 })
 
+function removeErrLayout() {
+    let inputBox = document.getElementById('inputBox').classList.remove('border-red-500');
+    let addLinkWarning = document.getElementById('addLinkWarning').classList.add('hidden');
+    userUrl.classList.remove('placeholder-red-500')
+}
+
+function addErrLayout() {
+    let inputBox = document.getElementById('inputBox').classList.add('border-red-500');
+    let addLinkWarning = document.getElementById('addLinkWarning').classList.remove('hidden');
+    userUrl.classList.add('placeholder-red-500')
+    userUrl.value = ''
+}
 
 function displayData(link1, link2, link3, originalLink) {
     
@@ -48,7 +58,7 @@ function displayData(link1, link2, link3, originalLink) {
                 </div>
                 <div class="flex gap-10 ">
                     <a class="text-cyann py-3 px-8" target="_blank" name="shortLink" href="https://${link1}">${link1}</a>
-                    <button id="btnCopy" data-clipboard-text="https://${link1}" class="bg-cyann btn-copy text-white py-3 px-8 rounded-lg">Copy</button>
+                    <button id="btnCopy" data-clipboard-text="https://${link1}" class="bg-cyann btn-copy text-white py-3 px-8 rounded-lg hover:bg-cyann2">Copy</button>
                 </div>
             </div>
         </div>
@@ -61,7 +71,7 @@ function displayData(link1, link2, link3, originalLink) {
                 </div>
                 <div class="flex gap-10 ">
                     <a class="text-cyann py-3 px-8" target="_blank" name="shortLink" href="https://${link2}">${link2}</a>
-                    <button id="btnCopy" data-clipboard-text="https://${link2}" class="bg-cyann btn-copy text-white py-3 px-8 rounded-lg">Copy</button>
+                    <button id="btnCopy" data-clipboard-text="https://${link2}" class="bg-cyann btn-copy text-white py-3 px-8 rounded-lg hover:bg-cyann2">Copy</button>
                 </div>
             </div>
         </div>
@@ -74,7 +84,7 @@ function displayData(link1, link2, link3, originalLink) {
                 </div>
                 <div class="flex gap-10 ">
                     <a class="text-cyann py-3 px-8" target="_blank" name="shortLink" href="https://${link3}">${link3}</a>
-                    <button id="btnCopy" data-clipboard-text="https://${link3}" class="bg-cyann btn-copy text-white py-3 px-8 rounded-lg">Copy</button>
+                    <button id="btnCopy" data-clipboard-text="https://${link3}" class="bg-cyann btn-copy text-white py-3 px-8 rounded-lg hover:bg-cyann2">Copy</button>
                 </div>
             </div>
         </div>
