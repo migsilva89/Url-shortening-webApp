@@ -1,4 +1,4 @@
-# Frontend Mentor - Shortly URL shortening API Challenge
+# Shortly URL shortening API Challenge
 
 ![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
 
@@ -27,14 +27,14 @@ Your users should be able to:
 ## Project Setup
 
 ```sh
-??
+npm install 
 ```
 
 ```sh
-??
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
 ```
 
-[Check it out here!](https://url-shortening-web-app.vercel.app/).
+[Live Url here.](https://url-shortening-web-app.vercel.app/).
 
 Tips or advice on how to improve are very welcome, thank you all!
 
