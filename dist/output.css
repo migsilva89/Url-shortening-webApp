@@ -2042,6 +2042,22 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-28 {
+  padding-top: 7rem;
+}
+
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-36 {
+  padding-top: 9rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2705,6 +2721,11 @@ video {
 @media (min-width: 768px) {
   .md\:col-span-2 {
     grid-column: span 2 / span 2;
+  }
+
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .md\:mt-20 {

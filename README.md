@@ -22,8 +22,6 @@ Your users should be able to:
 - Javascript;
 - [shrtcode API](https://app.shrtco.de/).
 
-
-
 ## Project Setup
 
 ```sh
