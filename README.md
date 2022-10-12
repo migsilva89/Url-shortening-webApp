@@ -22,6 +22,7 @@ Your users should be able to:
 - Semantic HTML5 markup;
 - TailiwndCSS;
 - Javascript;
+- [clipboard.js](https://clipboardjs.com/)
 - [shrtcode API](https://app.shrtco.de/).
 
 ## Project Setup
